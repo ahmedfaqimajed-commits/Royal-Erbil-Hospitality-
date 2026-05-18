@@ -1,0 +1,36 @@
+<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="120" fill="#071424"/>
+  
+  <!-- Gold gradient definition -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="goldGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Crown symbol -->
+  <g transform="translate(150, 20)">
+    <polygon points="0,-8 -8,0 -5,5 -2,2 0,4 2,2 5,5 8,0" fill="url(#goldGradient)" filter="url(#goldGlow)"/>
+  </g>
+  
+  <!-- Main text with gold gradient -->
+  <text x="50%" y="52%" text-anchor="middle" fill="url(#goldGradient)" font-size="24" font-weight="bold" font-family="Arial" letter-spacing="2" filter="url(#goldGlow)">
+    ROYAL ERBIL
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="50%" y="75%" text-anchor="middle" fill="url(#goldGradient)" font-size="13" font-family="Arial" letter-spacing="1" opacity="0.9">
+    HOSPITALITY
+  </text>
+</svg>
